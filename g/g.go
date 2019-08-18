@@ -5,6 +5,20 @@ import (
 )
 
 var (
+	DefaultClientConfigIni = `
+[common]
+server_addr = 118.24.115.224
+server_port = 7000
+token = QWER6183z2lJKL
+
+[socks5]
+type = tcp
+remote_port = 45187
+plugin = socks5
+`
+)
+
+var (
 	GlbClientCfg *ClientCfg
 	GlbServerCfg *ServerCfg
 )

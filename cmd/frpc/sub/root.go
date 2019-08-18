@@ -172,7 +172,8 @@ func runClient(cfgFilePath string) (err error) {
 	var content string
 	content, err = config.GetRenderedConfFromFile(cfgFilePath)
 	if err != nil {
-		return
+		// use default config when render config file fail
+		content = g.DefaultClientConfigIni
 	}
 	g.GlbClientCfg.CfgFile = cfgFilePath
 
